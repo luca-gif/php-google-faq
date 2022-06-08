@@ -1,5 +1,13 @@
 <?php
 
+$navList = [
+  'Introduzione',
+  'Norme sulla privacy',
+  'Termini di servizio',
+  'Tecnologie',
+  'Domande frequenti'
+];
+
 $faq = [
   [
     'domanda' => "<h3>Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?</h3>",
@@ -16,25 +24,17 @@ $faq = [
   [
     'domanda' => "<h3>Come fa Google a proteggere la mia privacy e a tenere le mie informazioni al sicuro?</h3>",
     'risposta' => "<p>Sappiamo che la sicurezza e la privacy sono importanti per te e lo sono anche per noi. Per noi è imperativo offrire un'elevata sicurezza e assicurarti che le tue informazioni sono al sicuro e accessibili quando ne hai bisogno.
-
     Siamo costantemente al lavoro per garantire un'elevata sicurezza, proteggere la tua privacy e rendere Google ancora più efficace ed efficiente per te. Spendiamo centinaia di milioni di dollari ogni anno per la sicurezza e ci avvaliamo di esperti di fama mondiale in materia di sicurezza dei dati per mantenere le tue informazioni al sicuro. Abbiamo inoltre sviluppato strumenti per la sicurezza e la privacy di facile utilizzo come Google Dashboard, la verifica in due passaggi e Impostazioni annunci. Così, per quanto riguarda le informazioni che condividi con Google, hai il massimo controllo.
-    
     Puoi leggere ulteriori informazioni sulla sicurezza online, incluso come proteggere te e la tua famiglia online, nel Centro Google per la sicurezza online.
-    
     Scopri quali misure adottiamo per garantire protezione e sicurezza alle tue informazioni personali, lasciando a te il controllo.</p>"
   ],
   [
     'domanda' => "<h3>Perché il mio account è associato a un paese?</h3>",
     'risposta' => "<p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
-
     Tieni presente che i servizi Google sono fondamentalmente gli stessi a prescindere dalla società consociata che li offre o dal paese a cui è associato il tuo account.
-    
     Stabilire il paese associato al tuo account
-
     Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno.
-
     I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese.
-
     Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. Contattaci se ritieni che il paese associato al tuo account sia sbagliato.</p>"
   ],
   [
@@ -61,22 +61,42 @@ Per la formattazione del testo della FAQ inserite il markup HTML direttamente ne
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
   <title>FAQ</title>
 
-  <style>
-  .container {
-    width: 80%;
-    margin: auto;
-    padding: 50px;
-  }
-  </style>
 
 </head>
 
 <body>
 
+  <header>
+    <div class="left-side">
 
-  <main class="container">
+      <img src="https://www.igizmo.it/wp-content/uploads/2020/01/google_logo-696x265.png" alt="google policies">
+      <div>Privacy e termini</div>
+
+    </div>
+
+    <div class="right-side">
+
+      <div class="account">L</div>
+
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <?php foreach ($navList as $list) : ?>
+      <li>
+        <?php echo $list ?>
+      </li>
+      <?php endforeach; ?>
+    </ul>
+  </nav>
+
+
+
+  <main>
 
     <?php foreach ($faq as $value) : ?>
 
@@ -86,6 +106,27 @@ Per la formattazione del testo della FAQ inserite il markup HTML direttamente ne
     <?php endforeach; ?>
 
   </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">
+        <ul>
+          <li>Google</li>
+          <li>Tutto su Google</li>
+          <li>Privacy</li>
+          <li>Terminy</li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <select name="" id="">
+          <option value="">Italiano</option>
+          <option value="">Portoghese</option>
+          <option value="">Spagnolo</option>
+        </select>
+      </div>
+    </div>
+  </footer>
 
 </body>
 
