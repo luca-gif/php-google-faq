@@ -2,13 +2,6 @@
 
 include "db.php";
 
-$miaVariabile = "ciao";
-
-echo "testo iniziale  $miaVariabile | $miaVariabile | $miaVariabile  testoFinale";
-
-echo 'testo iniziale ' .  $miaVariabile . ' testoFinale';
-
-
 ?>
 <!-- Riscrivere questa pagina del sito google, ci sono diverse domande con relative risposte.
 Gestire il “Database” e la visualizzazione di queste domande e risposte con PHP.
